@@ -1,0 +1,73 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="col-xs-1">
+
+    </div>
+    <div class="navbar-header col-xs-10">
+      <a class="navbar-brand">d3-Graphical</a>
+    </div>
+    <div class="col-xs-1">
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-1">
+    </div>
+    <div class="col-xs-10">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="nav nav-tabs">
+            <li id="tab_2d" class="active tab" ng-click="is3D = false; selectedZAxis=''"><a>2D</a></li>
+            <li id="tab_3d" class="tab" ng-click="is3D=true"><a>3D</a></li>
+          </ul>
+          <div style="border: 1px solid #ddd; border-top-color: transparent; border-radius: 0 0 4px 4px;">
+            <div class="row" style="margin:15px">
+              <div class="col-xs-12">
+                <ul class="nav nav-pills">
+                  <li role="presentation"
+                    ng-click="graphView = 'template/line_diagram_template.html';"><a>Line</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/histogram_template.html';"><a>Histogram</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/bar_plot_template.html';"><a>Bar Plot</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/pie_chart_template.html';"><a>Pie Chart</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/sunbust_template.html';"><a>Sunbust</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/dependency_map_template.html';"><a>Dependency Map</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/network_template.html';"><a>Network</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/heatmap_template.html';"><a>Heatmap</a>
+                  </li>
+                  <li role="presentation"
+                    ng-click="graphView = 'template/dragable_cluster_template.html';"><a>Dragable Cluster</a>
+                  </li>
+                  <li role="presentation" class="active"
+                    ng-click="graphView = 'template/radial_tree_template.html';"><a>Radial Tree</a>
+                  </li>
+                </ul>
+                <div style="border: 1px solid #ddd; border-radius: 4px 4px;"  ng-include="graphView">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1">
+    </div>
+  </div>
+</div>
+<div ng-include="'template/tooltip.html'">
+</div>
